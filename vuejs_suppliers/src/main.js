@@ -7,9 +7,11 @@ import routes from './router/index.js'
 Vue.use(VueRouter)
 
 Vue.config.productionTip = false
+
 const router = new VueRouter({
   routes
 })
+
 new Vue({
   router,
   render: h => h(App),

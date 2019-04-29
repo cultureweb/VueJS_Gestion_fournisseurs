@@ -3,15 +3,12 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <HomePage></HomePage>
     <router-view></router-view>
-    
  
   </div>
 </template>
 
 <script>
 import HomePage from './components/HomePage.vue'
-
-
 
 
 export default {

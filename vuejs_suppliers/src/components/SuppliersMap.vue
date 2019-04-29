@@ -1,6 +1,7 @@
 <template>
   <div>
    <h3>{{ title }}</h3>
+
   </div>
 </template>
 
@@ -8,7 +9,7 @@
 export default {
   name: 'SuppliersMap',
   data(){
-    return{
+    return {
       title: "Carte des fournisseurs"
     }
   } 

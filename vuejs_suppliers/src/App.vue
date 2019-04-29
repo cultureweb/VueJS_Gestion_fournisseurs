@@ -1,25 +1,24 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld></HelloWorld>
-    <suppliersList></suppliersList>
-    <suppliersMap></suppliersMap>
+    <HomePage></HomePage>
+    <router-view></router-view>
+    
  
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import SuppliersList from './components/SuppliersList.vue'
-import SuppliersMap from './components/SuppliersMap.vue'
+import HomePage from './components/HomePage.vue'
+
+
+
 
 export default {
   name: 'app',
   components: {
-
-    HelloWorld,
-    SuppliersList,
-    SuppliersMap
+    HomePage,
+    
   }, 
 }
 </script>

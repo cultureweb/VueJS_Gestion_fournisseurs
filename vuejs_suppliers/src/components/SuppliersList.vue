@@ -1,6 +1,7 @@
 <template>
   <div>
     <h3>{{ title }}</h3>
+  
   </div>
 </template>
 
@@ -9,9 +10,8 @@ export default {
   name: 'SuppliersList',
   data(){
     return{
-      title:"Consulter la carte des fournisseurs" 
+      title:"Liste des fournisseurs" 
     }
   }
-  
 }
 </script>

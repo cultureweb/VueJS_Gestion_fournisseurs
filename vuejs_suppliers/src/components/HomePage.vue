@@ -1,19 +1,15 @@
 <template>
   <div class="hello">
     <h1>{{ title }}</h1>
-   
- 
     <ul>
-      <li  @click="onSuppliersListClick" class="btn btn-success" ><a >consulter la liste des fournisseurs</a></li>
-      <li @click="onMapClick" class="btn btn-success" ><a >afficher la carte</a></li>
+       <li><router-link to="/suppliers" class="btn btn-success">Consulter la liste des fournisseurs</router-link></li>
+       <li><router-link to="/map" class="btn btn-success mr-1">Voir la carte</router-link></li>
     </ul>
-   
   </div>
 </template>
-
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'HomePage',
    data() {
     return{
       title : "Que voulez vous faire ?"

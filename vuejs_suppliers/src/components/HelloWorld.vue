@@ -7,7 +7,6 @@
       <li  @click="onSuppliersListClick" class="btn btn-success" ><a >consulter la liste des fournisseurs</a></li>
       <li @click="onMapClick" class="btn btn-success" ><a >afficher la carte</a></li>
     </ul>
- 
    
   </div>
 </template>
@@ -15,9 +14,12 @@
 <script>
 export default {
   name: 'HelloWorld',
-  props: {
-    title: String
+   data() {
+    return{
+      title : "Que voulez vous faire ?"
+    }
   },
+  
   methods: {
     onSuppliersListClick: function() {
       window.alert("vous avez cliquer sur la liste des fournisseurs");

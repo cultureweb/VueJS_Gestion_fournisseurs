@@ -47,11 +47,15 @@ Si des questions vous sont posées, choisissez les options par défaut.
 
 **Votre réponse :**
 
+Toujours lire le fichier readme.md
+
 Avant même de commencer à lancer l'application et sans regarder le code vous pouvez apprendre plein de choses. Prenez cette habitude.
 
 **Question :** Regardez le fichier `README.md`, quelle est la commande que nous allons utiliser pour travailler le projet ?
 
 **Votre réponse :**
+
+npm install
 
 - Lancez le projet.
 

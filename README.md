@@ -23,6 +23,9 @@ npm install --global @vue/cli
 
 **Votre réponse :**
 
+npm est le gestionnaire de paquets officiel de Node.js. Depuis la version 0.6.3 de Node.js, npm fait partie de l'environnement et est donc automatiquement installé par défaut. npm fonctionne avec un terminal et gère les dépendances pour une application
+
+Cela permet une utilisation à travers la ligne de commande de n’importe où. Attention à l’usage de l’installation globale ! Si il peut sembler pratique d’avoir accès à des paquets de n’importe où sur le système sans devoir les réinstaller, la portabilité de votre module/programme ne sera plus assurée. En effet lors du déploiement sur un autre système, les dépendances globales éventuelles ne seront peut être pas résolues. Il peut aussi y avoir un conflit de version entre votre projet et un module au niveau global.
 
 Vérfier que la version de Vue CLI installée est au moins la version 3 :
 

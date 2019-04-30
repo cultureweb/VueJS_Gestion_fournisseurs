@@ -5,9 +5,9 @@
     <!-- <Supplier ></Supplier> -->
    <div v-for="supplier in suppliers" :key="supplier.id">
    <Supplier 
-   v-bind:name="supplier.name" 
-   v-bind:status="supplier.status" 
-   v-bind:checkedAt="supplier.checkedAt.toLocaleString()"   
+   :name="supplier.name" 
+   :status="supplier.status" 
+   :checkedAt="formatDate(supplier.checkedAt).toLocaleString()"    
    >
    </supplier>
 
@@ -18,7 +18,7 @@
 
 <script>
 import Supplier from './Supplier.vue'
-
+import { format, render, cancel, register } from 'timeago.js';
 export default {
   components: {
 Supplier
@@ -42,6 +42,11 @@ Supplier
           checkedAt: new Date()
         }
       ]
+    }
+  },
+  methods:{
+    formatDate(date){
+       return format(date)
     }
   }
 }

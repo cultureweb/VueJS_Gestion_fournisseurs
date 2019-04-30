@@ -12,6 +12,7 @@ const router = new VueRouter({
   routes
 })
 
+
 new Vue({
   router,
   render: h => h(App),

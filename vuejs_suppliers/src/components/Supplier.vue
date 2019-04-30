@@ -17,10 +17,7 @@ export default {
          status: Boolean,
          id: Number
      },
-  data(){ 
-    return {
-      
-    }
-  }
+
+ 
 }
 </script>

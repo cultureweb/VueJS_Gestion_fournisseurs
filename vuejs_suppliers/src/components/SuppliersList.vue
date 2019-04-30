@@ -7,7 +7,7 @@
    <Supplier 
    v-bind:name="supplier.name" 
    v-bind:status="supplier.status" 
-   v-bind:checkedAt="supplier.checkedAt"
+   v-bind:checkedAt="supplier.checkedAt.toLocaleString()"   
    >
    </supplier>
 
@@ -27,13 +27,19 @@ Supplier
   data(){
     return {
 
-      title:"Liste des fournisseurs",
+      title:'Liste des fournisseurs',
       suppliers:[
         {
           id: 1,
           name: 'Fournisseur MEGASTAR',
-          status: false, // est ce qu'il y a du stock
-          checkedAt: new Date().toLocaleString() // date de la dernière mise à jour du stock
+          status: true, // est ce qu'il y a du stock
+          checkedAt: new Date()
+        },
+        {
+          id: 2,
+          name: 'Fournisseur SMITH\'S',
+          status: false,
+          checkedAt: new Date()
         }
       ]
     }

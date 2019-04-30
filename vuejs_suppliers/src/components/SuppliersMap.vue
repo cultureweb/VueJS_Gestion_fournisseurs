@@ -16,20 +16,17 @@
   :zoom="7"
   style="width: 100%; height: 800px; margin: auto"
 >
+  
+   <GmapMarker ref="myMarker"
+    v-for="supplier in suppliers" :key="supplier.id"
+
+    :position="{lat: supplier.latitude, lng: supplier.longitude}" />
 </gmap-map>
-<!-- <GmapMap
- :options="{
-   zoomControl: true,
-   mapTypeControl: false,
-   scaleControl: false,
-   streetViewControl: false,
-   rotateControl: false,
-   fullscreenControl: true,
-   disableDefaultUi: false
- }"
->
-</GmapMap> -->
-  </div>
+
+
+</div>
+
+
 </template>
 
 <script>
@@ -37,7 +34,19 @@ export default {
   name: 'SuppliersMap',
   data(){
     return {
-      title: "Carte des fournisseurs"
+      title: "Carte des fournisseurs",
+      suppliers: [
+  {
+    id: 1,
+    latitude: 37.426877,
+    longitude: 141.014220
+  },
+  {
+    id: 2,
+    latitude: 37.593898, 
+    longitude: 140.177730
+  }
+]
     }
   } 
 }

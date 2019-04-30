@@ -245,9 +245,13 @@ Il est toujours fondamental de savoir évaluer avant de se lancer un package ou 
 
 **Votre réponse :**
 
+il existe plusieurs methode dont 1 qui m'inspire car elle se fait automatiquement avec npm 
+
 **Question :** Cherchez puis listez d'autres packages qui permettraient d'afficher une carte google maps.
 
 **Votre réponse :**
+
+Plugin Nuxt et Plugin Webpack
 
 ##### 7.2) Map vide.
 
@@ -258,6 +262,8 @@ Le concept de clef API est très, très commun, aussi nous vous invitons à pren
 **Question :** A quoi sert une clef API ? Puis je partager cette clef ? Dois je la commiter ?
 
 **Votre réponse :**
+
+La clé API sert à la fois d'identifiant unique et de jeton secret pour l'authentification et un ensemble de droits d'accès lui est associé. Elle ne doit pas être commité sinon elle sera partagé !!! Et facturé par Google 
 
 Une fois que vous avez votre clef, insérez ce bout de code dans votre fichier `main.js` :
 

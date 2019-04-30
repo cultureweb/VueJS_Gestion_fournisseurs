@@ -208,6 +208,10 @@ Pour rendre paramétrable une fonction il faut ajouter des paramètres. Pour ren
 
 **Votre réponse :**
 
+Nous sommes maintenant tenus d’inclure une key dans nos boucles est de fournir vue avec un moyen facile d’être en mesure de regarder quels éléments dans votre tableau (ou l’objet, puisque la boucle sur les objets est autorisé) est en train de changer. 
+Dans la mesure du possible, comme suggéré par la documentation vue, nous devons utiliser l’ID unique de l’élément. La raison en est que vue peut suivre plus précisément les modifications dans les éléments de votre tableau et mettre à jour l’état du composant et aussi pour être en mesure de réutiliser et de réorganiser les composants existants plutôt que d’avoir à effectuer un nouveau rendu de la boucle entière.
+
+
 ➡️ Modifiez un peu le style pour que les éléments de la liste soient mieux visibles, voici un exemple de ce que vous pourriez obtenir :
 
 ![](images/step4.png)

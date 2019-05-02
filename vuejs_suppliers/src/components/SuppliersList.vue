@@ -12,7 +12,7 @@
    :checkedAt="formatDate(supplier.checkedAt).toLocaleString()"    
    >
    </supplier>
-
+    
    </div>
   </ul>
   </div>
@@ -20,35 +20,28 @@
 
 <script>
 import Supplier from './Supplier.vue'
-import { format, render, cancel, register } from 'timeago.js'
-import axios from 'axios'
+import { mapState } from 'vuex'
+import { format } from 'timeago.js'
+
+
 export default {
-  components: {
-Supplier
-  },
   name: 'SuppliersList',
+ computed: mapState([
+    'suppliers'
+  ]),
   data(){
-    return {
- suppliers: [], // au début la liste des fournisseurs est vide
-      loading: false,
-      error: null,
-      title:'Liste des fournisseurs',
-     
+    return{
+      title: 'List des fournisseurs',
+      error: false
     }
+
   },
-   mounted () {
-    axios
-      .get('https://api-suppliers.herokuapp.com/api/suppliers')
-     .then(response => {
-        this.suppliers = response.data
-      })
-      .catch(error => {
-        console.log(error)
-        this.error = true
-      })
-      .finally(() => this.loading = false)
-  
-     
+
+  components: {
+    Supplier
+  },
+  mounted: function () {
+    this.$store.dispatch('LOAD_SUPPLIERS_LIST')
   },
   methods:{
     formatDate(date){

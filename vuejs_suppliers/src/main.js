@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 import routes from './router/index.js'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import apiKey from '../config.js'
-
+import { store } from './components/store/TodoStore.js'
 
 Vue.use(VueRouter)
 Vue.use(VueGoogleMaps, {
@@ -20,6 +20,7 @@ const router = new VueRouter({
 
 
 new Vue({
+  store,
   router,
   render: h => h(App),
 }).$mount('#app');

@@ -2,20 +2,24 @@
   <div class="hello">
     <h1>{{ title }}</h1>
     <ul>
-       <li><router-link to="/suppliers" class="btn btn-success">Consulter la liste des fournisseurs</router-link></li>
-       <li><router-link to="/map" class="btn btn-success mr-1">Voir la carte</router-link></li>
+      <li>
+        <router-link to="/suppliers" class="btn btn-success">Consulter la liste des fournisseurs</router-link>
+      </li>
+      <li>
+        <router-link to="/map" class="btn btn-success mr-1">Voir la carte</router-link>
+      </li>
     </ul>
   </div>
 </template>
 <script>
 export default {
-  name: 'HomePage',
-   data() {
-    return{
-      title : "Que voulez vous faire ?"
-    }
+  name: "HomePage",
+  data() {
+    return {
+      title: "Que voulez vous faire ?"
+    };
   },
-  
+
   methods: {
     onSuppliersListClick: function() {
       window.alert("vous avez cliquer sur la liste des fournisseurs");
@@ -24,7 +28,7 @@ export default {
       window.alert("vous avez cliquer sur la carte");
     }
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

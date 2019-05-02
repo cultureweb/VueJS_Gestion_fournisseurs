@@ -427,6 +427,13 @@ Si vous faites attention, nous faisons le même appel http dans nos deux composa
 
 - Quelles idées avez vous pour répondre à ce problème ?
 
+On pourrait mettre une variable globale et recuperer les Datas dans App puis grâce aux props les passer d'un component à un autre, ou utiliser une application comme **Vuex** qui un gestionnaire d'état (« state management pattern ») ou une sorte de librairie. 
+Il sert de zone de stockage de données centralisée pour tous les composants dans une application.
+
+Voici **une bonne citation** de Dan Abramov, l'auteur de Redux :
+
+**« Les librairies Flux, c'est comme les lunettes : vous saurez quand vous en aurez besoin. »**
+
 - Essayez de mettre en oeuvre une solution.
 
 ### 9) Aller plus loin.

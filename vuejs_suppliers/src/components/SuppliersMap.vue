@@ -2,7 +2,7 @@
   <div>
     <h3>{{ title }}</h3>
     <gmap-map
-      :center="{lat:43.611092, lng:-96.251176}"
+      :center="{lat:currentLocation.lat, lng:currentLocation.lng}"
       :options="{  
    mapTypeControl: true,
    scaleControl: false,
@@ -11,7 +11,7 @@
    fullscreenControl: true,
    disableDefaultUi: false
  }"
-      :zoom="1"
+      :zoom="17"
       style="width: 100%; height: 300px; margin: auto"
     >
       <GmapMarker
@@ -29,15 +29,38 @@ import { mapState } from "vuex";
 
 export default {
   name: "SuppliersMap",
-  computed: mapState(["suppliers"]),
+  computed: {
+...mapState(["suppliers"]),
+  }, 
+  
   data() {
     return {
+       currentLocation: {
+            lat: 0,
+            lng: 0
+        },
       title: "Carte des fournisseurs",
       error: false
     };
   },
-  mounted: function() {
+  mounted() {
     this.$store.dispatch("LOAD_SUPPLIERS_LIST");
+    this.geolocation();
+  },
+  methods:{
+     geolocation : function() {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.currentLocation = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+      });
+    }
+
+ 
+    
+
+
   }
 };
 </script>

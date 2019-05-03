@@ -10,7 +10,8 @@ Vue.use(VueAxios, axios)
 
 export const store = new Vuex.Store({
     state: {
-        suppliers: []
+        suppliers: [],
+       
     },
     actions: {
         LOAD_SUPPLIERS_LIST: function ({ commit }) {
@@ -19,9 +20,9 @@ export const store = new Vuex.Store({
             }, (err) => {
                 console.log(err)
             })
-        }
-    },
-
+        },
+        
+},
     mutations: {
         SET_SUPPLIERS_LIST: (state, { list }) => {
             state.suppliers = list
@@ -31,10 +32,10 @@ export const store = new Vuex.Store({
     getters: {
         completedSuppliers: state => {
             return state.suppliers.filter(suppliers => suppliers.completed).length
-        }
+        },
+        
     },
 
 
 })
-
 

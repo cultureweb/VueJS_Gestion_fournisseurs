@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 import routes from './router/index.js'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import apiKey from '../config.js'
-import { store } from './components/store/TodoStore.js'
+import { store }  from './store/store.js'
 
 Vue.use(VueRouter)
 Vue.use(VueGoogleMaps, {
@@ -15,6 +15,7 @@ Vue.use(VueGoogleMaps, {
 Vue.config.productionTip = false
 
 const router = new VueRouter({
+  mode: 'history',
   routes
 })
 

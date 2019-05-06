@@ -1,16 +1,16 @@
 <template>
   <div>
     <h3>{{ title }}</h3>
-
-    <select v-model="selected">
-
-
-  <option>Stock Disponible</option>
-  <option>Aucun Stock Disponible</option>
-  <option>Tous</option>
-</select>
-
-<span>Sélectionné : {{ selected }}</span>
+<div class="form-group">
+  <label for="sel1">Selectionnez ... </label>
+  <select v-model="selected" >
+    <option value="withStock">Stock Disponible</option>
+    <option value="withoutStock">Aucun Stock Disponible</option>
+    <option value="all">Tous</option>
+  </select>
+</div>
+<!-- déselectionner le commentaire ci-dessous pour voir la valeur de selected qui n'est autre que value  -->
+<!-- <span>Sélectionné : {{ selected }}</span>  -->
      
   <ul>
     <div v-if="error">
@@ -18,7 +18,7 @@
     </div>
   
 
-   <div v-else v-for="supplier in suppliers" :key="supplier.id">
+   <div v-else v-for="supplier in filteredDatas" :key="supplier.id">
    <Supplier 
    :name="supplier.name" 
    :status="supplier.status" 
@@ -43,7 +43,7 @@ export default {
     return{
       title: 'List des fournisseurs',
       error: false,
-      selected: ''
+      selected: '',
     }
       },
   components: {
@@ -51,6 +51,21 @@ export default {
   },
  computed: {
    ...mapState(['suppliers']),
+   filteredDatas: function() {
+    if (this.selected === 'withoutStock') {
+      //console.log(this.suppliers);
+    return this.suppliers.filter(supllier => !supllier.status)
+      
+   }
+   else if (this.selected === 'withStock') { 
+    return this.suppliers.filter(supllier => supllier.status)
+       }
+   
+   else {
+     
+     return this.suppliers;
+   }
+}
   },
 //    filteredByState() {
 //      if (this.selected == 'Stock Disponible'){ 

@@ -24,10 +24,12 @@
    <Supplier 
    :name="supplier.name" 
    :status="supplier.status" 
-   :checkedAt="formatDate(supplier.checkedAt).toLocaleString()"    
+   :checkedAt="formatDate(supplier.checkedAt).toLocaleString()" 
+   :id="supplier.id"   
    >
+   
    </supplier>
-    
+  
    </div>
   </ul>
   </div>

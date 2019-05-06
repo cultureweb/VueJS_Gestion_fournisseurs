@@ -10,6 +10,23 @@
         v-model="newSuppliers.name"
         placeholder="Saisir ici le nom du nouveau fournisseur"
       >
+      <p class="mt-4">Coordonnées GPS du fournisseur</p>
+       <label for="formGroupExampleInput">Latitude</label>
+      <input
+        type="number"
+        class="form-control w-50 mx-auto"
+        id="formGroupExampleInput"
+        v-model="newSuppliers.latitude"
+        placeholder="Saisir ici la latitude"
+      >
+             <label for="formGroupExampleInput">Longitude</label>
+      <input
+        type="number"
+        class="form-control w-50 mx-auto"
+        id="formGroupExampleInput"
+        v-model="newSuppliers.longitude"
+        placeholder="Saisir ici la longitude"
+      >
       <div class="row">
         <div class="col-sm-10">
           <div class="form-check">
@@ -40,6 +57,8 @@ export default {
       newSuppliers: 
         {
           name: "",
+          latitude: "",
+          longitude: "",
           status: true,
           checkedAt: new Date()
         }
@@ -52,11 +71,11 @@ export default {
     //       console.log(this.$router)
     //   },
       
-        createNewSupplier(){
-              console.log('create')
-              axios.post('https://api-suppliers.herokuapp.com/api/suppliers',  this.newSuppliers)
-         .then((response) => {
-            this.$router.push({ path: '/suppliers' });
+    createNewSupplier(){
+          console.log('create')
+          axios.post('https://api-suppliers.herokuapp.com/api/suppliers',  this.newSuppliers)
+      .then((response) => {
+        this.$router.push({ path: '/suppliers' });
     //console.log(response);
   })
   .catch(function (error) {

@@ -1,17 +1,24 @@
 <template>
   <div class="hello">
     <h1>{{ title }}</h1>
-    <ul>
+    <ul class="form-group">
       <li>
         <router-link to="/suppliers" class="btn btn-success">Consulter la liste des fournisseurs</router-link>
       </li>
       <li>
         <router-link to="/map" class="btn btn-success mr-1">Voir la carte</router-link>
       </li>
+       
+    </ul >
+    <ul>
+    <li class="">
+        <router-link to="/form" class="btn btn-success mr-1">Ajouter un nouveau fournisseur</router-link>
+      </li>
     </ul>
   </div>
 </template>
 <script>
+
 export default {
   name: "HomePage",
   data() {

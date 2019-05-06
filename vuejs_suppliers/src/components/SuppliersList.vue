@@ -8,6 +8,8 @@
     <option value="withoutStock">Aucun Stock Disponible</option>
     <option value="all">Tous</option>
   </select>
+
+
 </div>
 <!-- déselectionner le commentaire ci-dessous pour voir la valeur de selected qui n'est autre que value  -->
 <!-- <span>Sélectionné : {{ selected }}</span>  -->
@@ -67,14 +69,6 @@ export default {
    }
 }
   },
-//    filteredByState() {
-//      if (this.selected == 'Stock Disponible'){ 
-//             //  if(this.suppliers.status){
-//  return this.selected ='toto';
-//              }
-
-//         }
-  // },
   mounted() {
     this.$store.dispatch('LOAD_SUPPLIERS_LIST')
   

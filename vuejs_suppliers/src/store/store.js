@@ -13,13 +13,11 @@ export const store = new Vuex.Store({
         suppliers: [],
        
     },
-    
-    getters: {  //Les getters prennent l'état en premier argument
-    completedSuppliers: state => {
-        return state.suppliers.filter(suppliers => suppliers.completed).length
-    },
-    
-},
+    // getters: {  //Les getters prennent l'état en premier argument
+    // completedSuppliers: state => {
+    //     return state.suppliers.filter(suppliers => suppliers.completed).length
+    // },
+// },
     actions: {
         LOAD_SUPPLIERS_LIST: function ({ commit }) {
             axios.get('https://api-suppliers.herokuapp.com/api/suppliers').then((response) => {

@@ -49,20 +49,16 @@ export default {
          id: String,
      },
      methods: {
-    showModal(id){
-         console.log('https://api-suppliers.herokuapp.com/api/suppliers/' +  id);
-         this.activeModal = true
-       //  this.$router.push({ path: '/modal' });
-      
+    showModal: function(id) {
+         this.activeModal = true     
       },
-      deleteSupplier(id){
+      deleteSupplier: function(id){
             axios.delete('https://api-suppliers.herokuapp.com/api/suppliers/' +  id)
       .then((response) => {
         this.$store.dispatch('LOAD_SUPPLIERS_LIST')
-    //console.log(response);
   })
   .catch(function (error) {
-    console.log(error);
+   
   });
 
       }

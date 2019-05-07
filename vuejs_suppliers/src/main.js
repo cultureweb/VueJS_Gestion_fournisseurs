@@ -5,6 +5,7 @@ import routes from './router/index.js'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import apiKey from '../config.js'
 import { store }  from './store/store.js'
+import './registerServiceWorker'
 
 Vue.use(VueRouter)
 Vue.use(VueGoogleMaps, {

@@ -72,7 +72,7 @@ export default {
     //   },
       
     createNewSupplier(){
-          console.log('create')
+          console.log('https://api-suppliers.herokuapp.com/api/suppliers',  this.newSuppliers)
           axios.post('https://api-suppliers.herokuapp.com/api/suppliers',  this.newSuppliers)
       .then((response) => {
         this.$router.push({ path: '/suppliers' });

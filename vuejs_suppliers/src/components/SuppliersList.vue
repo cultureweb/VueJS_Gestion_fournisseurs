@@ -47,7 +47,8 @@ export default {
     return{
       title: 'List des fournisseurs',
       error: false,
-      selected: '',
+      selected: ''
+ 
     }
       },
   components: {

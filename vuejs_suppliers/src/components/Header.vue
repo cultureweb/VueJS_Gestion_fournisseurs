@@ -12,7 +12,7 @@
     </ul >
     <ul>
     <li class="">
-        <router-link to="/form" class="btn btn-success mr-1">Ajouter un nouveau fournisseur</router-link>
+        <router-link to="/addsupplier" class="btn btn-success mr-1">Ajouter un nouveau fournisseur</router-link>
       </li>
     </ul>
   </div>
